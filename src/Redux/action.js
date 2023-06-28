@@ -20,13 +20,12 @@ const getDataFailure= () =>{
     }
 }
 
-const getData=(page,filter)=>(dispatch)=>{
-    console.log("Pageeee",page)
+const getData=()=>(dispatch)=>{
         dispatch(getDataRequest())
-    return axios.get(`https://api.spacexdata.com/v3/capsules?offset=${page}&limit=8&status=${filter}`)
+    return axios.get(`https://mocki.io/v1/a41f3039-4c21-42bb-a886-d9a342a02ae9`)
     .then((r)=>{
         dispatch(getDataSuccess(r.data))
-        console.log(r.data)
+        console.log("IMDB DATA",r.data)
     })
     .catch((e)=>{
         dispatch(getDataFailure(e))
