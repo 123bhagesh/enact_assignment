@@ -1,9 +1,10 @@
 import React from "react";
 import { AiFillHome, AiOutlineSearch, AiFillPlayCircle } from "react-icons/ai";
 import { FaUserCircle } from "react-icons/fa";
+import styles from './BottomBar.module.css'
 export const BottomBar = () => {
   return (
-    <div className="bottomBarContainer">
+    <div className={styles.bottomBarContainer}>
       {/* <div> */}
         <button>
           <AiFillHome />

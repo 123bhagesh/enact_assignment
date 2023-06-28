@@ -4,10 +4,12 @@ import { MainRoutes } from './MainRoutes/MainRoutes';
 import { BottomBar } from './Component/BottomBar';
 
 function App() {
+
   return (
     <div className="App">
       <MainRoutes />
       <BottomBar/>
+
     </div>
   );
 }

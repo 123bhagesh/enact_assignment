@@ -15,7 +15,7 @@ import { useSelector } from "react-redux";
 export const AutoSwiper = () => {
   const data = useSelector((store) => store.data);
   const [topMovies, setTopMovie] = useState([]);
-  console.log("DATAaaaaa", data);
+//   console.log("DATAaaaaa", data);
   function tipMoviesFun() {
     let movies = [];
     data.map((el, i) => {
@@ -49,8 +49,8 @@ export const AutoSwiper = () => {
       >
         {topMovies.map((el) => (
           <SwiperSlide style={{display:'flex',flexDirection:'column'}}>
-            <img style={{width:"90%",height:'300px',margin:'auto' }} src="https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="moviesImage" />
-            <p>{el.original_title}</p>
+            <img style={{width:"90%",height:'250px',margin:'auto' }} src="https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="moviesImage" />
+            <h5>{el.original_title}</h5>
             </SwiperSlide>
         ))}
       </Swiper>

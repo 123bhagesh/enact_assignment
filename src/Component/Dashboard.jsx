@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { getData } from '../Redux/action'
 import { useDispatch } from 'react-redux'
 import { AutoSwiper } from './AutoSwiper'
+import { LatestMovies } from './LatestMovies'
+import { BottomBar } from './BottomBar'
 
 export const Dashboard = () => {
     const dispatch = useDispatch()
@@ -14,6 +16,8 @@ export const Dashboard = () => {
     <div>
       <h1>Dashboard</h1>
       <AutoSwiper/>
+      <LatestMovies/>
+      {/* <BottomBar/> */}
     </div>
   )
 }
