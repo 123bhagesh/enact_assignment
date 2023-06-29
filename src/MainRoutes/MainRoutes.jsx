@@ -4,6 +4,7 @@ import { Dashboard } from '../Pages/Dashboard'
 import { Search } from '../Pages/Search'
 import { Video } from '../Pages/Video'
 import { FilterMovies } from '../Pages/FilterMovies'
+import { MovieDetail } from '../Pages/MovieDetail'
 export const MainRoutes = () => {
   return (
     <Routes>
@@ -11,7 +12,8 @@ export const MainRoutes = () => {
         <Route path="/search" element={<Search/>}/>
         <Route path="/video" element={<Video/>}/>
         <Route path="/profile" element={<Dashboard/>}/>
-        <Route path="/filter-movieslist" element={<FilterMovies/>}/>
+        <Route path="/filter/:filter" element={<FilterMovies/>}/>
+        <Route path="/movie-details/:detail" element={<MovieDetail/>}/>
 
     </Routes>
   )

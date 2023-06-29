@@ -1,15 +1,17 @@
 
 @media screen and (min-device-width: 375px) and (max-device-width: 600px) { 
     .bottomBarContainer{
-        margin: auto;
+        /* margin: auto; */
         display: flex;
         justify-content: space-around;
         align-items: center;
         background-color: rgb(70, 70, 70);
-        position: sticky;
+        position: fixed;
         bottom: 0px;
+        left: 0px;
+
         z-index: 100;
-        width: 94%;
+        width: 100%;
         padding: 0px 10px;
 
     }

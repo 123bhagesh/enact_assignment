@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Search.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/action";
+import { useNavigate } from "react-router-dom";
 
 const countrylist = [
   "Canada",
@@ -14,35 +15,28 @@ const countrylist = [
   "United Kingdom",
   "United States",
 ];
-const yearlist = [1918, 1996, 1914, 1992, 1910, 1908, 1906, 1904, 1902];
+const yearlist = [1918, 1996, 1914, 1912, 1910, 1908, 1906, 1904, 1902];
 export const Search = () => {
+
+  const navigate = useNavigate()
   const dispatch = useDispatch();
   const data = useSelector((store) => store.data);
-  const [topMovies, setTopMovie] = useState([]);
 
   const [country, setCountry] = useState("");
   const [year, setYear] = useState(null);
 
   console.log("DATAaaaaa", data);
-
-  console.log("Latest MOVIES", topMovies);
   useEffect(() => {
     dispatch(getData());
   }, []);
 
   const handleFilter = () => {
-    console.log("YYYYYY", year, country);
-    let movies = [];
-    data.filter((el) => {
-      if (el.year >= year && el.country == country) {
-        movies.push(el);
-        // console.log("ELELELE",el)
-      } else if (el.year >= year || el.country == "Australia") {
-        movies.push(el);
-      }
-    });
-    console.log("MMMMMMMMMMM", movies);
-    setTopMovie(movies);
+    if(year || country){
+      navigate(`/filter/${year || country}`)
+    }
+    else{
+      alert("Add Year or Country to Filter")
+    }
   };
   const handleClear = () => {
     setCountry("");
@@ -51,7 +45,7 @@ export const Search = () => {
   };
 
   // console.log("TTTTTTTTTTTTTTt", topMovies);
-
+/////////////////////////////////////////////////
   const [query, setQuery] = useState("");
   const [medias, setMedias] = useState([]);
 
@@ -75,6 +69,8 @@ export const Search = () => {
     const newQuery = e.target.value;
     setQuery(newQuery);
   };
+
+
   return (
     <div className={styles.searchContainer}>
       <input
@@ -89,7 +85,7 @@ export const Search = () => {
         ) : (
           <div> */}
             {medias.map((media) => (
-              <div style={{display:"flex",width:"100%",height:"110px",gap:"5%",marginTop:'10px'}} key={media.imdb_title_id}>
+              <div style={{display:"flex",width:"100%",height:"110px",gap:"5%",marginTop:'10px'}} key={media.imdb_title_id} onClick={()=> navigate(`/movie-details/${media.title}`)}>
                 <div style={{ width: "80px",height:"100px" }}>
                   <img
                     src='https://i.pinimg.com/236x/e1/f6/ba/e1f6ba2316b80194b0b309c3aefddedd.jpg'
