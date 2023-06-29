@@ -10,8 +10,8 @@ export const MainRoutes = () => {
     <Routes>
         <Route path="/" element={<Dashboard/>}/>
         <Route path="/search" element={<Search/>}/>
-        <Route path="/video" element={<Video/>}/>
-        <Route path="/profile" element={<Dashboard/>}/>
+        <Route path="#" element={<Video/>}/>
+        <Route path="/#" element={<Dashboard/>}/>
         <Route path="/filter/:filter" element={<FilterMovies/>}/>
         <Route path="/movie-details/:detail" element={<MovieDetail/>}/>
 

@@ -18,12 +18,12 @@ const navItem = [
   {
     name: "Video",
     icon: AiFillPlayCircle,
-    link: "/video",
+    link: "#",
   },
   {
     name: "You",
     icon: FaUserCircle,
-    link: "/profile",
+    link: "#",
   },
 ];
 
@@ -31,15 +31,6 @@ export const BottomBar = () => {
   const navigate = useNavigate();
   const [activeNav, setActiveNav] = useState("/");
 
-  const handleNavigateHome = () => {
-    return navigate("/");
-  };
-  const handleNavigateSearch = () => {
-    return navigate("/search");
-  };
-  const handleNavigateVideo = () => {
-    return navigate("/video");
-  };
   return (
     <div className={styles.bottomBarContainer}>
       {navItem.map((el, i) => (
@@ -58,61 +49,7 @@ export const BottomBar = () => {
           <p>{el.name}</p>
         </button>
       ))}
-      {/* <button
-        onClick={handleNavigateHome}
-        style={{ color: activeNav == `/` ? "yellow" : "rgb(240,240,240)" }}
-      >
-        <AiFillHome
-          style={{
-            width: "20px",
-            height: "20px",
-            marginTop: "10px",
-          }}
-        />
-        <p>Home</p>
-      </button>{" "}
-      <button
-        onClick={handleNavigateSearch}
-        style={{
-          color: activeNav == `/search` ? "yellow" : "rgb(240,240,240)",
-        }}
-      >
-        <AiOutlineSearch
-          style={{
-            width: "20px",
-            height: "20px",
-            marginTop: "10px",
-          }}
-        />
-        <p>Search</p>
-      </button>{" "}
-      <button
-        onClick={handleNavigateVideo}
-        style={{ color: activeNav == `/video` ? "yellow" : "rgb(240,240,240)" }}
-      >
-        <AiFillPlayCircle
-          style={{
-            width: "20px",
-            height: "20px",
-            marginTop: "10px",
-          }}
-        />
-        <p>Video</p>
-      </button>{" "}
-      <button
-        onClick={() => navigate(`/`)}
-        style={{ color: activeNav == `/` ? "yellow" : "rgb(240,240,240)" }}
-      >
-        <FaUserCircle
-          style={{
-            width: "20px",
-            height: "20px",
-            marginTop: "10px",
-          }}
-        />
-        <p>You</p>
-      </button> */}
-      {/* <a href="/">Home</a><a href="/search">Search</a><a href="/video">Video</a><a href=""></a> */}
+      
     </div>
   );
 };

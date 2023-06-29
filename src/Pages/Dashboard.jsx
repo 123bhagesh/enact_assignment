@@ -13,7 +13,7 @@ export const Dashboard = () => {
 
   return (
     <div>
-      <h1>Dashboard</h1>
+      <h2>Top Movies</h2>
       <AutoSwiper/>
       <LatestMovies/>
       {/* <BottomBar/> */}
