@@ -1,0 +1,73 @@
+.searchContainer{
+    width: 94%;
+    /* height: 50px; */
+    /* border: 2px solid blue; */
+    margin: auto;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+.searchContainer > input{
+    width: 100%;
+    height: 30px;
+    border-radius: 4px;
+    padding-left: 10px ;
+}
+h4{
+  text-align: left;
+}
+.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+    gap: 8px;
+    margin-top: -20px;
+  }
+  
+  .scrollmenu p {
+    display: inline-block;
+    /* border: 2px solid red; */
+    color: white;
+    text-align: center;
+    padding: 8px 15px;
+    text-decoration: none;
+    background-color: #333;
+
+  }
+  
+  .scrollmenu p:hover {
+    background-color: #777;
+  }
+  .filterDiv{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(75, 75, 69);
+    justify-content: center;
+    margin-top: 10px;
+
+  }
+  .clearButton{
+    height: 45px;
+    /* width: 300px; */
+    background-color: rgb(75, 75, 69);
+    color: yellow;
+    border: none;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .filterButton{
+    height: 45px;
+    width: 60%;
+    background-color: yellow;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+  }

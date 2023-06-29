@@ -7,8 +7,8 @@ function App() {
 
   return (
     <div className="App" style={{position:'relative'}}>
-      <MainRoutes />
       <BottomBar/>
+      <MainRoutes />
 
     </div>
   );
