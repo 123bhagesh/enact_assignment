@@ -1,0 +1,33 @@
+
+@media screen and (min-device-width: 375px) and (max-device-width: 600px) { 
+    .bottomBarContainer{
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(70, 70, 70);
+        position: sticky;
+        bottom: 0px;
+        z-index: 100;
+        width: 94%;
+        padding: 0px 10px;
+
+    }
+    .bottomBarContainer > button{
+        width: 40px;
+        height: 60px;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: -10px;
+        background-color: rgb(70, 70, 70);
+        /* border: 2px solid white; */
+    }
+    .bottomBarContainer > button >p{
+        /* color:rgb(240,240,240); */
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+}
